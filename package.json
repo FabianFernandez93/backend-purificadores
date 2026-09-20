@@ -1,15 +1,28 @@
 {
   "name": "backend-purificadores",
   "version": "1.0.0",
-  "description": "API Node.js para purificadores de agua",
-  "main": "server.js",
+  "description": "API Backend en Node.js para gestión de purificadores de agua",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "node --watch server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FabianFernandez93/backend-purificadores.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/FabianFernandez93/backend-purificadores/issues"
+  },
+  "homepage": "https://github.com/FabianFernandez93/backend-purificadores#readme",
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "pg": "^8.11.5"
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.1",
+    "express": "^5.2.1",
+    "pg": "^8.23.0"
   }
 }
