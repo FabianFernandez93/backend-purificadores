@@ -4,12 +4,19 @@ const express = require("express");
 const cors = require("cors");
 const pool = require("./src/config/database");
 const clientesRoutes = require("./src/routes/clientes.routes");
-
+const comunasRoutes = require("./src/routes/comunas.routes");
+const mantencionesRoutes = require("./src/routes/mantenciones.routes");
+const programacionesRoutes = require("./src/routes/programaciones.routes");
+const instalacionesRoutes = require("./src/routes/instalaciones.routes");
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 app.use("/api/clientes", clientesRoutes);
+app.use("/api/comunas", comunasRoutes);
+app.use("/api", mantencionesRoutes);
+app.use("/api", programacionesRoutes);
+app.use("/api/instalaciones", instalacionesRoutes);
 
 app.get("/", (req, res) => {
   res.json({
